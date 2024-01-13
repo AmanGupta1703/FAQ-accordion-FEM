@@ -34,8 +34,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [GitHub Code Link](https://github.com/AmanGupta1703/FAQ-accordion-FEM)
+- Live Site URL: [Vercel App Preview](https://faq-accordion-fem-chi.vercel.app/)
 
 ## My process
 
