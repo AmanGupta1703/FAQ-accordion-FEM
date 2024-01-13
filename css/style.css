@@ -1,0 +1,236 @@
+/* RESET START */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* RESET END */
+/* BASE START */
+@font-face {
+  font-family: "WorkSans-Regular";
+  src: url("../assets/fonts/static/WorkSans-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "WorkSans-SemiBold";
+  src: url("../assets/fonts/static/WorkSans-SemiBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "WorkSans-Bold";
+  src: url("../assets/fonts/static/WorkSans-Bold.ttf") format("truetype");
+}
+:root {
+  --color-white: hsl(0, 0%, 100%);
+  --color-light-pink: hsl(275, 100%, 97%);
+  --color-grayish-purple: hsl(292, 16%, 49%);
+  --color-dark-purple: hsl(292, 42%, 14%);
+  --font-weight-regular: 400;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--color-light-pink);
+  font-family: "WorkSans-Regular", sans-serif;
+  overflow-y: hidden;
+}
+
+/* BASE END */
+/* HEADER START */
+.header__img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+/* HEADER END */
+.accordion-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transform: translateY(-20rem);
+          transform: translateY(-20rem);
+}
+
+.accordion-container {
+  background-color: var(--color-white);
+  -webkit-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+          box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 1.5rem;
+  padding: 3rem;
+  width: 40%;
+}
+
+.accordion__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 2rem;
+     -moz-column-gap: 2rem;
+          column-gap: 2rem;
+}
+.accordion__header__title {
+  font-size: 5rem;
+  font-family: "WorkSans-Bold";
+}
+
+.card {
+  margin-top: 1.5rem;
+}
+.card:not(:last-child) {
+  border-bottom: 0.1rem solid var(--color-light-pink);
+}
+.card__header {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.card__question {
+  font-size: 1.6rem;
+}
+.card__question:hover {
+  color: #ad28eb;
+}
+.card__body {
+  margin-top: 1.6rem;
+  padding-bottom: 1.6rem;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+}
+.card__body--hide {
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+  opacity: 0;
+}
+.card__body--show {
+  height: auto;
+  overflow: auto;
+  visibility: visible;
+  opacity: 1;
+}
+.card__answer {
+  font-size: 1.4rem;
+  opacity: 0.5;
+}
+
+.btn {
+  cursor: pointer;
+}
+.btn--hide {
+  display: none;
+}
+.btn--show {
+  display: inline-block;
+}
+
+@media screen and (max-width: 426px) {
+  body {
+    overflow: auto;
+  }
+  .accordion-section {
+    -webkit-transform: translateY(-7rem);
+            transform: translateY(-7rem);
+  }
+  .accordion-container {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 321px) {
+  .accordion-container {
+    width: 100%;
+  }
+}
