@@ -27,10 +27,8 @@ function handleAccordionClick() {
 			});
 
 			if (prevSelectedQuestion === Number(qid)) {
-				cardEl.querySelector(".card__body").classList.add("card__body--hide");
-				cardEl
-					.querySelector(".card__body")
-					.classList.remove("card__body--show");
+				cardBodyEl.classList.add("card__body--hide");
+				cardBodyEl.classList.remove("card__body--show");
 
 				toggleButton(btnsEl);
 				prevSelectedQuestion = null;
